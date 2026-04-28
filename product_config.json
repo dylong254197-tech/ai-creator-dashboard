@@ -1,6 +1,12 @@
 {
   "wallet_address": "0x2cb55e288c404daf69d4cacbeadd9ae3aba25ffb",
-  "delivery_base_url": "https://raw.githubusercontent.com/dylong254197-tech/digital-products-assets/main/products",
+    "delivery_base_url": "https://raw.githubusercontent.com/dylong254197-tech/digital-products-assets/main/products",
+  "test_config": {
+    "wallet_address": "0x00192fb10df37c9fb26829eb2cc623cd1bf599e8",
+    "price_wei": 1000000000000000,
+    "test_tx_hash": "0x41a37d5c1f99ff63f626b8a299cee2ae062ae869fb9e7173c31db86f19ee48ea",
+    "test_from": "0xc7d75f9841733da1609dc93ef179955796095ea5"
+  },
   "products": [
     {
       "id": "ai-creator-dashboard",

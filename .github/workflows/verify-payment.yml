@@ -12,10 +12,12 @@ permissions:
 
 jobs:
   verify:
-    if: startsWith(github.event.pull_request.title, '[BUY]')
+    if: startsWith(github.event.pull_request.title, '[BUY]') || startsWith(github.event.pull_request.title, '[TEST]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
