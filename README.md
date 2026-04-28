@@ -44,20 +44,19 @@ AI Chat Log  → Knowledge Base      把对话中的最佳Prompt保存为知识
 
 ## 如何购买
 
-**方式一：GitHub PR（自动交付，1-5分钟）**
+**GitHub PR（自动交付，1-5分钟）**
 
-适合有以太坊钱包的开发者。Fork仓库 → 提交PR → 自动验证链上交易 → PR评论收到下载链接。
+适合有以太坊钱包的用户。操作三步：
 
 ```
 收款地址: 0x2cb55e288c404daf69d4cacbeadd9ae3aba25ffb
 ```
 
-[查看完整操作步骤](.github/PULL_REQUEST_TEMPLATE/buy_product.md)
+1. **付款** — 向收款地址转账 0.003 ETH
+2. **下单** — Fork 本仓库，创建 Pull Request，选择 **Buy Product** 模板，填写交易哈希和钱包地址
+3. **收货** — 系统自动验证链上交易，PR 评论中收到下载链接，PR 自动合并
 
-**方式二：网页购买**
-
-适合不熟悉GitHub的用户。访问产品页 → 转账 → 发交易哈希到Telegram。
-[访问产品页](https://dylong254197-tech.github.io/ai-creator-dashboard/)
+[查看完整模板说明](.github/PULL_REQUEST_TEMPLATE/buy_product.md)
 
 ---
 
@@ -100,5 +99,4 @@ AI Chat Log  → Knowledge Base      把对话中的最佳Prompt保存为知识
 - 4个互联数据库（Task Tracker / Content Calendar / AI Chat Log / Knowledge Base）
 - 17个预建视图
 - 暗色主题，中英文双语
-- GitHub PR自动交付
-- 网页+Telegram交付
+- GitHub PR自动交付（链上验证+自动合并）

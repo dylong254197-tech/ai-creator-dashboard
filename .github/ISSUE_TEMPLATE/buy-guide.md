@@ -60,5 +60,4 @@ assignees: ''
 
 ## 🆘 帮助
 
-1. **如何获取交易哈希？** 在 MetaMask 或 etherscan.io 中找到你的转账记录，复制交易哈希
-2. **如何添加 Sepolia 测试网？** 访问 [chainlist.org](https://chainlist.org) 搜索 Sepolia 添加
+**如何获取交易哈希？** 在 MetaMask 或 etherscan.io 中找到你的转账记录，复制交易哈希（0x开头，66字符）。
