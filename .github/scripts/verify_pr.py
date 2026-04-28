@@ -165,14 +165,15 @@ def parse_pr_body(body):
 # Etherscan API
 # ============================================================
 def call_etherscan(action, module="proxy", **params):
-    """Call Etherscan API. Using proxy module for raw tx data."""
+    """Call Etherscan API V2. Uses chainid=1 for Ethereum mainnet."""
     query_parts = [
         f"module={module}",
         f"action={action}",
+        "chainid=1",
     ] + [f"{k}={v}" for k, v in params.items()]
     if ETHERSCAN_API_KEY:
         query_parts.append(f"apikey={ETHERSCAN_API_KEY}")
-    url = "https://api.etherscan.io/api?" + "&".join(query_parts)
+    url = "https://api.etherscan.io/v2/api?" + "&".join(query_parts)
     req = urllib.request.Request(url, headers={"User-Agent": "verify-pr/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
