@@ -48,32 +48,59 @@ ETH收款地址:
 0x2cb55e288c404daf69d4cacbeadd9ae3aba25ffb
 ```
 
-付款后发送交易哈希至 **Telegram @HoHug_bot** 获取下载链接
+---
+
+## 🛒 购买方式（两种）
+
+### 方式一：GitHub PR（推荐技术用户）
+
+> 适合有以太坊钱包、熟悉GitHub操作的用户。自动化程度最高，提交后自动验证交付。
+
+1. **付款**: 向收款地址 `0x2cb55e288c404daf69d4cacbeadd9ae3aba25ffb` 转账 **0.003 ETH**
+2. **创建PR**: Fork本仓库 → 创建 Pull Request，选择 **Buy Product** 模板
+3. **填写信息**: 填入交易哈希、付款金额、你的钱包地址
+4. **等待验证**: 系统自动验证链上交易，通过后PR评论中收到下载链接
+5. **下载**: 点击链接获取 Notion 模板文件
+
+> 💡 详细操作请参考 [PR模板](.github/PULL_REQUEST_TEMPLATE/buy_product.md) 中的说明
+
+### 方式二：网页购买（面向普通用户）
+
+> 适合不熟悉GitHub的用户。手动验证，通常24小时内交付。
+
+1. 访问 [产品页面](https://dylong254197-tech.github.io/ai-creator-dashboard/)
+2. 向收款地址转账
+3. 发送交易哈希至 Telegram **@HoHug_bot**
 
 ---
 
-## 🛒 立即购买
+## 📋 购买流程对比
 
-👉 [**访问产品页面**](https://dylong254197-tech.github.io/ai-creator-dashboard/)
-
----
-
-## 📸 预览
-
-![Task Tracker](https://dylong254197-tech.github.io/ai-creator-dashboard/)
+| 特性 | GitHub PR | 网页购买 |
+|------|-----------|---------|
+| 操作复杂度 | 需会用GitHub | 只需浏览器和钱包 |
+| 验证速度 | 自动，几分钟 | 手动，数小时内 |
+| 交付凭证 | PR合并即凭证 | Telegram消息 |
+| 适合人群 | 开发者/技术用户 | 普通用户 |
 
 ---
 
 ## ❓ FAQ
 
 **Q: 如何导入到我的Notion?**
-A: 付款后下载模板文件，在Notion中点击 Import → Upload 即可。
+A: 付款后下载模板文件，在Notion中点击 Settings & Members → Import → Upload 即可。
 
 **Q: 支持退款吗?**
 A: 提供7天质量问题退款。
 
 **Q: 后续更新?**
 A: 免费终身更新，新功能会定期发布。
+
+**Q: 付款后多久能收到?**
+A: GitHub PR方式自动验证，通常1-5分钟；网页方式手动处理，通常在24小时内。
+
+**Q: 我怎么知道交易哈希?**
+A: 在 MetaMask 或区块浏览器（如 etherscan.io）中找到你的转账记录，复制交易哈希。
 
 ---
 
@@ -85,3 +112,5 @@ A: 免费终身更新，新功能会定期发布。
 - 17个预建视图
 - 暗色主题
 - 中英文双语适配
+- 支持 GitHub PR 自动交付
+- 支持网页+Telegram交付
