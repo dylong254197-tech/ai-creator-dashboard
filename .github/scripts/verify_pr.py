@@ -22,9 +22,8 @@ import urllib.error
 import base64
 
 # ============================================================
-# Config (from product_config.json via the repo itself)
+# Config (from local product_config.json)
 # ============================================================
-CONFIG_URL = "https://raw.githubusercontent.com/dylong254197-tech/ai-creator-dashboard/main/product_config.json"
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 ETHERSCAN_API_KEY = os.environ.get("ETHERSCAN_API_KEY", "")
@@ -108,9 +107,12 @@ def merge_pr(pr_number):
 # Product config loader
 # ============================================================
 def load_config():
-    req = urllib.request.Request(CONFIG_URL)
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read().decode())
+    """Load product_config.json from local file (relative to script path)."""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(script_dir, "..", "..", "product_config.json")
+    config_path = os.path.normpath(config_path)
+    with open(config_path, "r") as f:
+        return json.loads(f.read())
 
 
 # ============================================================
