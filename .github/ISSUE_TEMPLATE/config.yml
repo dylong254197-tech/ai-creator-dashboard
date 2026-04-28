@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🛒 购买指南
+    url: https://github.com/dylong254197-tech/ai-creator-dashboard/issues/new?template=buy-guide.md
+    about: 查看产品列表、付款地址和 PR 下单步骤
+  - name: 📖 产品说明
+    url: https://github.com/dylong254197-tech/ai-creator-dashboard/blob/main/README.md
+    about: 产品详细介绍
