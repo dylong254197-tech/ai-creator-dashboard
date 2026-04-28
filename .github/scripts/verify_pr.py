@@ -44,9 +44,20 @@ def gh_headers():
 
 def gh_get(path):
     url = f"{GITHUB_API}/{path.lstrip('/')}"
-    req = urllib.request.Request(url, headers=gh_headers())
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read().decode())
+    # Retry up to 3 times with backoff for transient errors (502, 503)
+    import time
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers=gh_headers())
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code in (502, 503, 504) and attempt < 2:
+                wait = (attempt + 1) * 2
+                print(f"  GitHub API {e.code}, retrying in {wait}s (attempt {attempt+1}/3)...")
+                time.sleep(wait)
+                continue
+            raise
 
 
 def gh_post(path, data):
