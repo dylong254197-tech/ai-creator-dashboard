@@ -1,0 +1,15 @@
+{
+  "wallet_address": "0x2cb55e288c404daf69d4cacbeadd9ae3aba25ffb",
+  "delivery_base_url": "https://raw.githubusercontent.com/dylong254197-tech/digital-products-assets/main/products",
+  "products": [
+    {
+      "id": "ai-creator-dashboard",
+      "name": "AI Creator Efficiency Dashboard",
+      "price_usd": 9,
+      "price_eth": 0.003,
+      "price_wei": 3000000000000000,
+      "delivery_file": "downloads/template-export.zip",
+      "description": "面向AI创作者的Notion全能指挥中心。4个互联数据库，17个预建视图，5分钟导入。"
+    }
+  ]
+}
