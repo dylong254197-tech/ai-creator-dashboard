@@ -1,1 +1,5 @@
 reports/
+
+# Except for review reports
+!reports/*review*.md
+!reports/*weekly*.md
