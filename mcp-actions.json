@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "site": "https://dylong254197-tech.github.io/ai-creator-dashboard/",
+  "actions": [
+    {
+      "id": "purchase-product",
+      "name": "Purchase AI Creator Dashboard",
+      "description": "Buy the AI Creator Efficiency Dashboard Notion template for $9. Send 0.003 ETH to the specified wallet address, then create a Pull Request with the transaction hash to receive the download link.",
+      "method": "declarative",
+      "endpoint": "https://github.com/dylong254197-tech/ai-creator-dashboard/pulls",
+      "parameters": {
+        "required": ["tx_hash", "wallet_address"],
+        "properties": {
+          "tx_hash": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{64}$",
+            "description": "Ethereum transaction hash (0x + 64 hex characters)"
+          },
+          "wallet_address": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{40}$",
+            "description": "The wallet address that initiated the payment"
+          }
+        }
+      }
+    }
+  ]
+}
